@@ -1,6 +1,7 @@
 ﻿namespace Onebrb.Data.Contexts
 {
     using Microsoft.EntityFrameworkCore;
+    using Onebrb.Data.Entities;
 
     public class MainDbContext : DbContext
     {
@@ -8,5 +9,7 @@
             : base(options)
         {
         }
+
+        public DbSet<Book> Books { get; set; }
     }
 }
